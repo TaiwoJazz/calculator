@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --operator-color: #f56f3a;
+  --active: #3a3b3d;
+  --hover: #333132;
+  --text-1: rgb(241, 241, 241);
+  --background: #241e1f;
+}
+
+html {
+  font-size: 100%;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+}
+
+.calculator {
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.calculator__display {
+  background-color: var(--background);
+  color: var(--text-1);
+  width: 14rem;
+  padding: 1rem 1rem;
+  text-align: right;
+  margin: auto 5px;
+  border-radius: 5px;
+  font-size: 1.7rem;
+  overflow: hidden;
+}
+
+.calculator__keys {
+  display: grid;
+  height: 16.25rem;
+  padding: 5px;
+  gap: 3px;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas:
+  "clear delete percentage divide"
+  "seven eight nine times"
+  "four five six minus"
+  "one two three plus"
+  "zero zero decimal equal";
+}
+
+.clear {
+  grid-area: clear;
+}
+.delete{
+  grid-area: delete;
+}
+.percentage{
+  grid-area: percentage;
+}
+.plus {
+  grid-area: plus;
+}
+.minus {
+  grid-area: minus;
+}
+.times {
+  grid-area: times;
+}
+.divide {
+  grid-area: divide;
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+.zero {
+  grid-area: zero;
+}
+.decimal {
+  grid-area: decimal;
+}
+.equal {
+  grid-area: equal;
+  background-color: var(--operator-color);
+  color: var(--text-1);
+}
+
+.equal:hover {
+  background-color: #fa5919;;
+}
+
+.btn {
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.zero,
+.decimal  {
+  color: var(--text-1);
+  background-color: var(--active);
+}
+
+.one:hover,
+.two:hover,
+.three:hover,
+.four:hover,
+.five:hover,
+.six:hover,
+.seven:hover,
+.eight:hover,
+.nine:hover,
+.zero:hover,
+.decimal:hover  {
+  background: var(--hover);
+}
+
+.clear,
+.delete,
+.percentage,
+.divide,
+.times,
+.minus,
+.plus {
+  color: var(--operator-color);
+  background-color: var(--hover);
+}
+
+.clear:hover,
+.delete:hover,
+.percentage:hover,
+.divide:hover,
+.times:hover,
+.minus:hover,
+.plus:hover {
+  background-color: var(--active);
+}
+
+
+@media only screen and (min-width: 700px){
+	html {
+    font-size: 200%;
+  }
+
+  body {
+    margin-top: 10vh;
+  }
+}
+
+@media only screen and (max-width: 700px) and (min-width: 500px) {
+	html {
+    font-size: 150%;
+  }
+
+  body {
+    margin-top: 10vh;
+  }
+}
