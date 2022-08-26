@@ -18,7 +18,12 @@ html {
 body {
   display: flex;
   justify-content: center;
-  margin-top: 20vh;
+  margin-top: 15vh;
+}
+
+h1 {
+  text-align: center;
+  color: var(--operator-color);
 }
 
 .calculator {
@@ -180,7 +185,7 @@ body {
   }
 
   body {
-    margin-top: 10vh;
+    margin-top: 15vh;
   }
 }
 
@@ -190,6 +195,6 @@ body {
   }
 
   body {
-    margin-top: 10vh;
+    margin-top: 5vh;
   }
 }
