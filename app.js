@@ -1,29 +1,20 @@
+
+const operators = document.querySelectorAll(".operator");
 const operations = document.querySelectorAll(".val");
+const digits = document.querySelectorAll(".digit");
 const displayAns = document.querySelector(".calculator__display__ans");
 const display = document.querySelector(".calculator__display");
-const deleteNumber = document.querySelector(".delete");
+const deleteItem = document.querySelector(".delete");
 const clear = document.querySelector(".clear");
-const digits = document.querySelectorAll(".digit");
-const operators = document.querySelectorAll(".operator");
 const equal = document.querySelector(".equal");
-const decimal = document.querySelector(".decimal");
 
 let numbers = [];
 let currentOperator = [];
 let displayOperation = [];
 
-deleteNumber.addEventListener("click", backspaceDisplay);
+deleteItem.addEventListener("click", backspace);
 clear.addEventListener("click", clearDisplay);
 equal.addEventListener("click", equalto);
-//decimal.addEventListener('click', decimalNum);
-
-const updateDisplay = () => {
-  display.textContent = numbers.join("");
-  if (numbers.length == 0 || numbers.length < 2) {
-    display.textContent = 0;
-  }
-  
-};
 
 operations.forEach((val) => {
   val.addEventListener("click", function (e) {
@@ -44,11 +35,11 @@ operations.forEach((val) => {
   });
 });
 
-function backspaceDisplay() {
+function backspace() {
   numbers.pop();
-  currentOperator.pop();
   displayOperation.pop();
-  updateDisplay();
+  currentOperator.pop();
+  display.textContent = displayOperation.join("")
 }
 
 function clearDisplay() {
@@ -56,7 +47,7 @@ function clearDisplay() {
   currentOperator = [];
   displayOperation = [];
   displayAns.textContent = "";
-  updateDisplay();
+  display.textContent = 0;
 }
 
 function inputDigit() {
@@ -65,9 +56,8 @@ function inputDigit() {
       let x = e.currentTarget.value;
       if (x === "0" && x === numbers[0]) {
         numbers = [];
-      } else if (x === "." && numbers.length < 2) {
-        numbers = ["0."];
-        console.log(numbers)
+      } else if (x === "." && x === numbers[0]) {
+        numbers = [];
       } else {
         numbers.push(x)
       }
@@ -78,6 +68,7 @@ inputDigit();
 
 function getAns(ans) {
   displayAns.textContent = ans;
+  displayAns.length = 15
   numbers = [];
   numbers.push(ans);
 }
