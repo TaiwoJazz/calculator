@@ -178,14 +178,13 @@ h1 {
   background-color: var(--active);
 }
 
-
 @media only screen and (min-width: 700px){
 	html {
     font-size: 200%;
   }
 
   body {
-    margin-top: 15vh;
+    margin-top: 0vh;
   }
 }
 
