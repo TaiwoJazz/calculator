@@ -10,7 +10,7 @@ const equal = document.querySelector(".equal");
 
 let numbers = [];
 let currentOperator = [];
-let displayOperation = [];
+let displayOperation = []
 
 deleteItem.addEventListener("click", backspace);
 clear.addEventListener("click", clearDisplay);
@@ -40,6 +40,9 @@ function backspace() {
   displayOperation.pop();
   currentOperator.pop();
   display.textContent = displayOperation.join("")
+  if (display.textContent.length == 0) {
+    display.textContent = 0;
+  }
 }
 
 function clearDisplay() {

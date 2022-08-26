@@ -36,6 +36,7 @@ h1 {
   background-color: var(--background);
   color: var(--text-1);
   width: 14rem;
+  height: 40px;
   padding: .2rem 1rem;
   text-align: right;
   margin: auto 5px;
