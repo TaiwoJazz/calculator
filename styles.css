@@ -67,7 +67,7 @@ h1 {
   "seven eight nine times"
   "four five six minus"
   "one two three plus"
-  "zero zero decimal equal";
+  "power zero decimal equal";
 }
 
 .clear {
@@ -90,6 +90,9 @@ h1 {
 }
 .divide {
   grid-area: divide;
+}
+.power {
+  grid-area: power;
 }
 .one {
   grid-area: one;
@@ -175,7 +178,8 @@ h1 {
 .divide,
 .times,
 .minus,
-.plus {
+.plus,
+.power {
   color: var(--operator-color);
   background-color: var(--hover);
 }
@@ -186,7 +190,8 @@ h1 {
 .divide:hover,
 .times:hover,
 .minus:hover,
-.plus:hover {
+.plus:hover,
+.power:hover {
   background-color: var(--active);
 }
 

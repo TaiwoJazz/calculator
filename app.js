@@ -91,6 +91,9 @@ function equalto() {
   } else if (operator == "÷") {
     let ans = num1 / num2;
     getAns(ans);
+  } else if (operator == "^") {
+    let ans = num1 ** num2;
+    getAns(ans);
   } else {
     display.textContent = "Error";
     numbers = [];
