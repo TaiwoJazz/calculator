@@ -28,8 +28,8 @@ h1 {
 
 .calculator {
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
+  border-radius: 5px;
+  padding-top: 5px;
 }
 
 .calculator__display__ans {
@@ -144,55 +144,29 @@ h1 {
   border: none;
 }
 
-.one,
-.two,
-.three,
-.four,
-.five,
-.six,
-.seven,
-.eight,
-.nine,
-.zero,
-.decimal  {
+.digit  {
   color: var(--text-1);
   background-color: var(--active);
 }
 
-.one:hover,
-.two:hover,
-.three:hover,
-.four:hover,
-.five:hover,
-.six:hover,
-.seven:hover,
-.eight:hover,
-.nine:hover,
-.zero:hover,
-.decimal:hover  {
+.digit:hover,
+.digit:focus  {
   background: var(--hover);
 }
 
+.operator,
 .clear,
-.delete,
-.percentage,
-.divide,
-.times,
-.minus,
-.plus,
-.power {
+.delete {
   color: var(--operator-color);
   background-color: var(--hover);
 }
 
 .clear:hover,
 .delete:hover,
-.percentage:hover,
-.divide:hover,
-.times:hover,
-.minus:hover,
-.plus:hover,
-.power:hover {
+.operator:hover,
+.clear:focus,
+.delete:focus,
+.operator:focus               {
   background-color: var(--active);
 }
 
